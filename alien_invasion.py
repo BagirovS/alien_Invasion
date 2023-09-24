@@ -1,14 +1,16 @@
 import sys
 import pygame
 from setting import Settings
+from ship import Ship
 
 def run_game():
     #Initializes game and create object screen
     pygame.init()
     ai_setting = Settings()
-    screen = pygame.display.set_mode(
-        (ai_setting.screen_width, ai_setting.screen_height))
+    screen = pygame.display.set_mode((ai_setting.screen_width, ai_setting.screen_height))
+    print(screen)
     pygame.display.set_caption("Alien Invasion")
+    #Ship(screen)
 
     #Screen color assignment
     bg_color = (100, 78, 230)
