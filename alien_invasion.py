@@ -12,11 +12,12 @@ def run_game():
     pygame.display.set_caption("Alien Invasion")
     #Ship(screen)
     #Create ship
-    ship = Ship(screen)
+    ship = Ship(ai_setting, screen)
 
     #Start the main cycle of game
     while True:
-        gf.check_events()
+        gf.check_events(ship)
+        ship.update()
         gf.update_screen(ai_setting, screen, ship)
 
 
