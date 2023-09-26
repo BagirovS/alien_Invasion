@@ -7,11 +7,11 @@ class Ship():
         self.screen = screen
 
         #Load ship picture and get rectangle
-        self.image = pygame.image.load('images/ship.png')
+        self.image = pygame.image.load('images/micro_ship.png')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         #Every new ship appear near bottom edge of screen
-        self.rect.centerx = self.screen_rect.centrex
+        self.rect.centerx = self.screen_rect.centerx
         self.rect.bottom = self.screen_rect.bottom
 
     def blitme(self):
